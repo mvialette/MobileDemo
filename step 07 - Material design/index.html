@@ -1,82 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
-</head>
-    <body ng-app="YourApp">
-
+<html ng-app="YourApp">
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<script src="./bower_components/angular/angular.js"></script>
+		<script src="./script.js"></script>
+	</head>
+	<body>
 		<div ng-controller="AppCtrl" layout="vertical">
-
-	  <section layout="horizontal" flex>
-
-		<material-sidenav class="material-sidenav-left material-whiteframe-z2" component-id="left">
-
-		  <material-toolbar class="material-theme-indigo">
-			<h1 class="material-toolbar-tools">Sidenav Left</h1>
-		  </material-toolbar>
-		  <material-content class="material-content-padding" ng-controller="LeftCtrl">
-			<material-button ng-click="close()" class="material-button-colored" hide-md>
-			  Close Sidenav Left
-			  
-			  {{texte}}
-			</material-button>
-		  </material-content>
-
-		</material-sidenav>
-
-		<material-content flex class="material-content-padding">
-
-		  <div layout="vertical" layout-fill layout-align="center center">
-			<p>
-			  On smaller devices, material-sidenav will be hidden by default. 
-			</p>
-			<p>
-			  On larger, it will be shown by default.
-			</p>
-
-			<div>
-			  <material-button ng-click="toggleLeft()" class="material-button-colored" hide-md>
-				Toggle left
-			  </material-button>
-			</div>
-
-			<div>
-			  <material-button ng-click="toggleRight()" class="material-button-colored" hide-md>
-				Toggle right
-			  </material-button>
-			</div>
-		  </div>
-
-		</material-content>
-
-		<material-sidenav class="material-sidenav-right material-whiteframe-z2" component-id="right">
-
-		  <material-toolbar class="material-theme-light">
-			<h1 class="material-toolbar-tools">Sidenav Right</h1>
-		  </material-toolbar>
-		  <material-content ng-controller="RightCtrl" class="material-content-padding">
-			<material-button ng-click="close()" class="material-button-colored" hide-md>
-			  Close Sidenav Right
-			</material-button>
-		  </material-content>
-
-		</material-sidenav>
-
-	  </section>
-	
-	</div>
-	<style>p{text-align:center}</style>
-
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/hammerjs/hammer.min.js"></script>
-    <script src="/bower_components/angular-material/angular-material.js"></script>
-	
-	<script src="script.js"></script>
-    
-
-</body>
+			Mon super texte : {{toto}}
+		</div>
+	</body>
 </html>
-
-

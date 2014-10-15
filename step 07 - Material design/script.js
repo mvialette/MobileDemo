@@ -1,25 +1,36 @@
-var yourApp = angular.module('YourApp', [ 'ngAnimate', 'ngMaterial' ]);
+/**
+'ngAnimate', 'ngMaterial'
+*/
 
-yourApp.controller('AppCtrl', function($scope, $timeout, $materialSidenav) {
+var monApp = angular.module('YourApp', []);
 
-	$scope.texte = 'Maxime';
+/*
+monApp.controller('AppCtrl', ['$scope', '$timeout', '$materialSidenav',function($scope, $timeout, $materialSidenav) {
+*/
+monApp.controller('AppCtrl', ['$scope',function($scope) {
+		$scope.toto = 'Maxime';
+	}]);
+		
+	/*
+	$scope.toggleLeft = function() {
+		$materialSidenav('left').toggle();
+	};
+	$scope.toggleRight = function() {
+		$materialSidenav('right').toggle();
+	};
+	
+}]);
 
-  $scope.toggleLeft = function() {
-    $materialSidenav('left').toggle();
-  };
-  $scope.toggleRight = function() {
-    $materialSidenav('right').toggle();
-  };
-});
-
-yourApp.controller('LeftCtrl', function($scope, $timeout, $materialSidenav) {
+/*
+monApp.controller('LeftCtrl', function($scope, $timeout, $materialSidenav) {
   $scope.close = function() {
     $materialSidenav('left').close();
   };
 });
 
-yourApp.controller('RightCtrl', function($scope, $timeout, $materialSidenav) {
+monApp.controller('RightCtrl', function($scope, $timeout, $materialSidenav) {
   $scope.close = function() {
     $materialSidenav('right').close();
   };
 });
+*/

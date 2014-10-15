@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="list-group">
+				  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+				  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+				  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+				  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+				</div>
+			</div>
+			<div class="row">
+			  <div class="col-md-6" id="usernameAA">A A</div>
+			  <div class="col-md-6" id="usernameAB">A B</div>
+			</div>
+			<div class="row">
+			  <div class="col-xs-4"><i class="fa fa-futbol-o"></i>B A</div>
+			  <div class="col-xs-4"><i class="fa fa-futbol-o fa-4x fa-spin"></i>B B</div>
+			  <div class="col-xs-4">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-camera fa-stack-1x"></i>
+				  <i class="fa fa-ban fa-stack-2x text-danger"></i>
+				</span>
+				B C
+			  </div>
+			</div>
+  		</div>
+		
+		<script>
+			// Save datas into local storage, uncomment next line :
+			localStorage.setItem("usernameAA", "Maxime VIALETTE");
+			localStorage.setItem("usernameAB", "Jessica VIALETTE");
+			
+			// Get datas from local storage, uncomment next line :
+			document.getElementById("usernameAA").innerHTML = localStorage.getItem("usernameAA");
+			document.getElementById("usernameAB").innerHTML = localStorage.getItem("usernameAB");
+		</script>
+		
+	</body>
+</html>
