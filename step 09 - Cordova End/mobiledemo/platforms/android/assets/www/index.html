@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="YourApp">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+        <title>Mobile Demo</title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="./bower_components/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="./bower_components/bootstrap-theme.min.css">
+		
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+		
+		<link rel="stylesheet" href="./sidebar.css">
+		
+		<!-- SPA -->
+		<script src="./bower_components/angular/angular.js"></script>
+		
+		<script src="./bower_components/angular-route/angular-route.js"></script>
+		
+		<script src="./script.js"></script>
+		
+		<script src="./bower_components/jquery-1.11.0.min.js"></script>
+	</head>
+	<body layout="vertical">
+		<!--toggle sidebar button-->
+		<nav class="navbar navbar-inverse">
+			<!-- <p class="visible-xs"> -->
+			<span class="navbar-brand">MobileDemo</span>
+			<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="fa fa-bars fa-2"></i></button>
+		  	<!-- </p> -->
+		</nav>
+			
+		<div ng-controller="MainController" class="container-fluid">
+		
+			<div class="row row-offcanvas row-offcanvas-left">
+        
+				 <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+					<ul class="nav nav-sidebar">
+					  <li><a class="list-group-item" href="#/home"><i class="fa fa-home fa-fw"></i>&nbsp; Home </a></li>
+					  <li><a class="list-group-item" href="#/library"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a></li>
+					  <li><a class="list-group-item" href="#/apps"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a></li>
+					  <li><a class="list-group-item" href="#/settings"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-sm-9 col-md-10 main">
+				  
+				  <h1 class="page-header">
+					<div class="row">
+						<div class="col-md-12">
+							Bienvenue <b>{{userName}}</b>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div ng-view></div>
+						</div>
+					</div>
+				  </h1>
+			  </div><!--/row-->
+			</div>
+				
+  		</div>
+		<script>
+			$(document).ready(function() {
+				$('[data-toggle=offcanvas]').click(function() {
+						$('.row-offcanvas').toggleClass('active');
+					}
+				);
+				
+				$('.nav-sidebar').click(function() {
+						$('.row-offcanvas').toggleClass('active');
+					}
+				);
+			});
+		</script>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
